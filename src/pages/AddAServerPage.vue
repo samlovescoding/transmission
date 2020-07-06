@@ -9,28 +9,61 @@
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
                         FTP Host
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="host" type="text" placeholder="Hostname">
+                    <input class="shadow appearance-none border rounded w-full
+                        py-2 px-3 text-gray-700 leading-tight focus:outline-none
+                        focus:shadow-outline"
+                           id="host"
+                           type="text"
+                           placeholder="Hostname"
+                           v-model="host"
+                    />
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
                         Port
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="port" type="text" placeholder="Port" value="21" >
+                    <input class="shadow appearance-none border rounded w-full
+                        py-2 px-3 text-gray-700 leading-tight focus:outline-none
+                        focus:shadow-outline"
+                           id="port"
+                           type="text"
+                           placeholder="Port"
+                           value="21"
+                           v-model="port"
+                    />
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
                         Username
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+                    <input class="shadow appearance-none border rounded w-full
+                        py-2 px-3 text-gray-700 leading-tight focus:outline-none
+                        focus:shadow-outline"
+                            id="username"
+                            type="text"
+                            placeholder="Username"
+                           v-model="username"
+                    />
                 </div>
                 <div class="mb-6">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
                         Password
                     </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="*******">
+                    <input class="shadow appearance-none border rounded w-full
+                        py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none
+                        focus:shadow-outline"
+                           id="password"
+                           type="password"
+                           placeholder="*******"
+                           v-model="password"
+                    />
                 </div>
                 <div class="flex items-center justify-between">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white
+                        font-bold py-2 px-4 rounded focus:outline-none
+                        focus:shadow-outline"
+                            type="button"
+                    >
                         Save
                     </button>
                 </div>
@@ -41,7 +74,18 @@
 
 <script>
     export default {
-        name: "AddAServerPage"
+        name: "AddAServerPage",
+        data: () => { return {
+            host: "",
+            port: 21,
+            username: "",
+            password: ""
+        }},
+        methods: {
+            save(){
+                alert("Saving to database.");
+            }
+        }
     }
 </script>
 
