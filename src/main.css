@@ -2,4 +2,31 @@
 
 @tailwind components;
 
+.font-ubuntu{
+    font-family: 'Ubuntu';
+}
+
+.font-nunito{
+    font-family: 'Nunito';
+}
+
+.font-roboto{
+    font-family: 'Roboto';
+}
+
+.box-100px{
+    height: 100px;
+    width: 100px;
+}
+
+.box-150px{
+    height: 150px;
+    width: 150px;
+}
+
+.box-200px{
+    height: 200px;
+    width: 200px;
+}
+
 @tailwind utilities;

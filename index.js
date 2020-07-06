@@ -7,7 +7,10 @@ app.on('ready', ()=>{
     console.log("Starting electron BrowserWindow.")
 
     mainWindow = new BrowserWindow({
-        show: false
+        show: false,
+        webPreferences:{
+            nodeIntegration: true
+        }
     })
 
     mainWindow.loadFile(`${__dirname}/public/index.html`)

@@ -38,7 +38,7 @@ module.exports = {
         ] 
       },
       {
-        test: /\.(woff|woff2|ttf|otf)$/,
+        test: /\.(woff|woff2|ttf|otf|svg)$/,
         loader: 'file-loader',
         include: [/fonts/],
 
@@ -53,6 +53,10 @@ module.exports = {
         use: [
           'vue-loader'
         ] 
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
       }
     ]
   },
@@ -61,5 +65,6 @@ module.exports = {
   ],
   optimization:{
     minimize: true
-  }
+  },
+  target: "electron-main"
 };
